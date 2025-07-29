@@ -20,7 +20,10 @@ It would be recommended to run this in a Conda environment, to allow VEP annotat
 ```bash
 conda create -n variant_env python=3.10
 
+
+
 Please also make sure that ANNOVAR, SnpEff, and FATHMM-MKL are downloaded and configured in your working directory:
+
 ~/annovar/
 ~/snpEff/
 ~/fathmm-MKL/
