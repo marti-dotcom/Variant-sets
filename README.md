@@ -28,6 +28,7 @@ Please also make sure that ANNOVAR, SnpEff, and FATHMM-MKL are downloaded and co
 ~/snpEff/
 ~/fathmm-MKL/
 
+---
 
 ## Directory Structure
 
@@ -40,9 +41,6 @@ Your directory should be structured as follows:
 ├── fathmm-MKL/
 ├── input.vcf
 └── vcf_annotation_tool.py
-```
-
----
 
 ## Usage
 
@@ -71,13 +69,6 @@ The following files will be generated in your working directory:
 * `output_bcftools_csq.vcf`
 * `output_predictions.txt` (FATHMM-MKL)
 
----
-
-## Coming Soon
-
-* Optional flags to toggle tools on/off
-* Merged CSV summarizing all annotations per variant
-* Web GUI for user uploads
 
 ---
 
