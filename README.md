@@ -31,11 +31,65 @@ Please also make sure that ANNOVAR, SnpEff, and FATHMM-MKL are downloaded and co
 
 ## Directory Structure
 
-You should place files as follows:
+Your directory should be structured as follows:
 
-- VCF input: `/home/user/your_file.vcf`
-- ANNOVAR: `/home/user/annovar/`
-- SnpEff: `/home/user/snpEff/`
-- FATHMM-MKL: `/home/user/fathmm-MKL/`
+```
+/home/user/
+├── annovar/
+├── snpEff/
+├── fathmm-MKL/
+├── input.vcf
+└── vcf_annotation_tool.py
+```
 
-The output files will be written to the same working directory.
+---
+
+## Usage
+
+To run the pipeline, simply call:
+
+```bash
+python vcf_annotation_tool.py /full/path/to/input.vcf
+```
+
+This will sequentially run:
+
+1. ANNOVAR annotation
+2. SnpEff annotation
+3. Ensembl VEP annotation
+4. BCFtools/csq annotation
+5. FATHMM-MKL prediction
+
+---
+
+## Output
+
+The following files will be generated in your working directory:
+
+* `output_annovar.hg38_multianno.txt`
+* `output_vep.vcf`
+* `output_bcftools_csq.vcf`
+* `output_predictions.txt` (FATHMM-MKL)
+
+---
+
+## Coming Soon
+
+* Optional flags to toggle tools on/off
+* Merged CSV summarizing all annotations per variant
+* Web GUI for user uploads
+
+---
+
+## License
+
+This project is for academic and research use only. Please cite the original tools (ANNOVAR, SnpEff, VEP, etc.) in any publications.
+
+---
+
+## Contact
+
+Developed by: **Martina**
+GitHub: [@marti-dotcom](https://github.com/marti-dotcom)
+
+---
