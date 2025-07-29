@@ -12,3 +12,12 @@ This tool requires the following tools to be installed and accessible in your en
 - SnpEff
 - BCFtools
 - FATHMM-MKL
+
+## Setup
+
+It would be recommended to run this in a Conda environment, to allow VEP annotation tool to run:
+
+```bash
+conda create -n variant_env python=3.10
+conda activate variant_env
+conda install -c bioconda ensembl-vep bcftools samtools
