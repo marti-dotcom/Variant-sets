@@ -10,13 +10,13 @@ This repository contains an automated annotation pipeline for processing human V
 * **BCFtools/csq**
 * **FATHMM-MKL**
 
-The pipeline was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs related to Mendelian and complex disorders. The files can be found in this GitHub page above.
+The pipeline was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs which are related to Mendelian and complex disorders. The files can be found in this GitHub page above.
 
 ---
 
 ## Dependencies
 
-Ensure the following tools are installed and accessible:
+Please make sure that the following tools are installed and accessible:
 
 * `perl` (for ANNOVAR)
 * `python ≥ 3.8`
@@ -33,7 +33,7 @@ Ensure the following tools are installed and accessible:
 
 ## Setting up your Environment
 
-It is recommended to run this pipeline in a conda environment to manage tool dependencies and avoid conflicts:
+It is recommended to run this pipeline in a conda environment (especially for VEP) to manage tool dependencies and avoid any errors and conflicts:
 
 ```bash
 conda create -n variant_env python=3.10
@@ -53,7 +53,7 @@ Alsoplease make sure that the following tools are downloaded manually and placed
 
 ## Directory Structure
 
-Your directory should be structured as follows:
+Your directory should be structured like this:
 
 ```
 /home/user/
@@ -66,7 +66,7 @@ Your directory should be structured as follows:
 
 ## Usage
 
-To run the pipeline, simply call:
+To run the pipeline, simply call the following from the command line:
 
 ```bash
 python vcf_annotation_tool.py /full/path/to/input.vcf
@@ -84,12 +84,12 @@ This will sequentially run:
 
 ## Output
 
-The following files will be generated in your working directory:
+The following output annotated files will be generated in your working directory:
 
 * `output_annovar.hg38_multianno.txt`
 * `output_vep.vcf`
 * `output_bcftools_csq.vcf`
-* `output_predictions.txt` (FATHMM-MKL)
+* `output_predictions.txt` (for FATHMM-MKL)
 
 ---
 
