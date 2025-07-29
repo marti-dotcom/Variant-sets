@@ -13,7 +13,7 @@ This tool requires the following tools to be installed and accessible in your en
 - BCFtools
 - FATHMM-MKL
 
-## Setup
+## Setting up environment
 
 It would be recommended to run this in a Conda environment, to allow VEP annotation tool to run:
 
@@ -21,3 +21,47 @@ It would be recommended to run this in a Conda environment, to allow VEP annotat
 conda create -n variant_env python=3.10
 conda activate variant_env
 conda install -c bioconda ensembl-vep bcftools samtools
+
+Please also make sure that ANNOVAR, SnpEff, and FATHMM-MKL are downloaded and configured in your working directory:
+~/annovar/
+~/snpEff/
+~/fathmm-MKL/
+
+
+#### 4. **Directory Structure**
+
+```md
+## Directory Structure
+
+You should place files as follows:
+
+- VCF input: `/home/user/your_file.vcf`
+- ANNOVAR: `/home/user/annovar/`
+- SnpEff: `/home/user/snpEff/`
+- FATHMM-MKL: `/home/user/fathmm-MKL/`
+
+The output files will be written to the same working directory.
+
+## Usage
+
+To annotate a VCF file, run:
+
+```bash
+python vcf_annotation_tool.py your_file.vcf
+
+
+This will generate annotated outputs from all tools in the same folder.
+
+
+#### 6.  **Sample Output**
+
+```md
+## Output Files
+
+- `output_annovar.*`
+- `output_vep.vcf`
+- `output_bcftools_csq.vcf`
+- `output_predictions.txt` (for FATHMM)
+
+
+
