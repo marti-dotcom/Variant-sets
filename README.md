@@ -1,32 +1,53 @@
-# Variant sets
-ClinVar and OMIM SNV sets
+# Variant Annotation Pipeline
 
-This repository contains curated datasets extracted from ClinVar of single nucleotide variants (SNVs) of OMIM and ClinVar. These datasets serve as benchmarks for evaluating variant annotation tools in the context of Mendelian and complex disorders. 
+## Overview
+
+This repository contains an automated annotation pipeline for processing human VCF files using multiple annotation tools, listed below:
+
+* **ANNOVAR**
+* **SnpEff**
+* **Ensembl VEP**
+* **BCFtools/csq**
+* **FATHMM-MKL**
+
+The pipeline was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs related to Mendelian and complex disorders. The files can be found in this GitHub page above.
+
+---
 
 ## Dependencies
 
-This tool requires the following tools to be installed and accessible in your environment:
+Ensure the following tools are installed and accessible:
 
-- ANNOVAR
-- Ensembl VEP
-- SnpEff
-- BCFtools
-- FATHMM-MKL
+* `perl` (for ANNOVAR)
+* `python ≥ 3.8`
+* `java ≥ 8` (for SnpEff)
+* `bcftools ≥ 1.9`
+* `samtools`
+* `tabix`
+* [ANNOVAR](http://www.openbioinformatics.org/annovar/)
+* [SnpEff](https://pcingola.github.io/SnpEff/)
+* [Ensembl VEP](https://www.ensembl.org/info/docs/tools/vep/index.html)
+* [FATHMM-MKL](http://fathmm.biocompute.org.uk/fathmmMKL.htm)
 
-## Setting up environment
+---
 
-It would be recommended to run this in a Conda environment, to allow VEP annotation tool to run:
+## Setting up your Environment
+
+It is recommended to run this pipeline in a conda environment to manage tool dependencies and avoid conflicts:
 
 ```bash
 conda create -n variant_env python=3.10
+conda activate variant_env
+conda install -c bioconda ensembl-vep bcftools samtools
+```
 
+Alsoplease make sure that the following tools are downloaded manually and placed in your home directory:
 
-
-Please also make sure that ANNOVAR, SnpEff, and FATHMM-MKL are downloaded and configured in your working directory:
-
+```bash
 ~/annovar/
 ~/snpEff/
 ~/fathmm-MKL/
+```
 
 ---
 
@@ -41,6 +62,7 @@ Your directory should be structured as follows:
 ├── fathmm-MKL/
 ├── input.vcf
 └── vcf_annotation_tool.py
+```
 
 ## Usage
 
@@ -69,8 +91,8 @@ The following files will be generated in your working directory:
 * `output_bcftools_csq.vcf`
 * `output_predictions.txt` (FATHMM-MKL)
 
-
 ---
+
 
 ## License
 
