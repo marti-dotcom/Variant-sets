@@ -84,7 +84,7 @@ This will sequentially run:
 
 ## Output
 
-The following output annotated files will be generated in your working directory, according to the software annotation tool:
+The following output files will be generated in your working directory, according to the software tools, with their relative variant annotations:
 
 * `output_annovar.hg38_multianno.txt`
 * `output_snpeff.vcf`
@@ -103,7 +103,8 @@ This project is for academic and research use only. Please cite the original too
 
 ## Contact
 
-Developed by: **Martina Debnath** <3
+Developed by: **Martina Debnath** 
+Thank you for using multi-annotator <3
 
 GitHub: [@marti-dotcom](https://github.com/marti-dotcom)
 
