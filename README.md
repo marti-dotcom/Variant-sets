@@ -103,7 +103,7 @@ This project is for academic and research use only. Please cite the original too
 
 ## Contact
 
-Developed by: **Martina Debnath** 
+Developed by: **Martina Debnath** | MSc Genetics and Multiomics in Medicine | UCL
 
 Thank you for using my multi-annotator tool <3
 
