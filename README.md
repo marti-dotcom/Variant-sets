@@ -106,6 +106,7 @@ This project is for academic and research use only. Please cite the original too
 Developed by: **Martina Debnath** <3
 
 GitHub: [@marti-dotcom](https://github.com/marti-dotcom)
+
 Email: martinadebnath@gmail.com
 
 ---
