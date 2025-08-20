@@ -1,3 +1,14 @@
+"""
+Variant Annotation Software Tools Automated Pipeline
+
+Author: Martina Debnath
+GitHub: https://github.com/marti-dotcom
+License: MIT
+"""
+__author__ = "Martina Debnath"
+__version__ = "1.0.0"
+__license__ = "MIT"
+
 import subprocess
 import os
 import sys
