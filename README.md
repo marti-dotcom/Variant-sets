@@ -107,6 +107,8 @@ Developed by: **Martina Debnath** | MSc Genetics and Multiomics in Medicine | UC
 
 Thank you for using my multi-annotator tool <3
 
+Feel free to reach out for collaborations.
+
 GitHub: [@marti-dotcom](https://github.com/marti-dotcom)
 
 Email: martinadebnath@gmail.com
