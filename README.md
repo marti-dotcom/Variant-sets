@@ -10,7 +10,7 @@ This repository contains an automated annotation pipeline for processing human V
 * **BCFtools/csq**
 * **FATHMM-MKL**
 
-The pipeline was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs which are related to Mendelian and complex disorders. The files can be found in this GitHub page above.
+The pipeline (five_tools.py) was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs which are related to Mendelian and complex disorders. The files can be found in this GitHub page above, named Clinvar_SNVs.vcf.gz and OMIM_SNVs.vcf.gz.
 
 ---
 
@@ -41,7 +41,7 @@ conda activate variant_env
 conda install -c bioconda ensembl-vep bcftools samtools
 ```
 
-Alsoplease make sure that the following tools are downloaded manually and placed in your home directory:
+Also, please make sure that the following tools are downloaded manually and placed in your home directory:
 
 ```bash
 ~/annovar/
@@ -61,7 +61,7 @@ Your directory should be structured like this:
 ├── snpEff/
 ├── fathmm-MKL/
 ├── input.vcf
-└── vcf_annotation_tool.py
+└── five_tools.py
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ Your directory should be structured like this:
 To run the pipeline, simply call the following from the command line:
 
 ```bash
-python vcf_annotation_tool.py /full/path/to/input.vcf
+python five_tools.py /full/path/to/input.vcf
 ```
 
 This will sequentially run:
