@@ -10,7 +10,7 @@ This repository contains an automated annotation pipeline for processing human V
 * **BCFtools/csq**
 * **FATHMM-MKL**
 
-The pipeline (five_tools.py) was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for SNVs which are related to Mendelian and complex disorders. The files can be found in this GitHub page above, named Clinvar_SNVs.vcf.gz and OMIM_SNVs.vcf.gz.
+The Python pipeline (five_tools.py) was developed to evaluate variant annotations from curated ClinVar and OMIM datasets, especially for single-nucleotide variants (SNVs), which are related to Mendelian and complex disorders. The personally curated VCF files can be found in this GitHub page above, named Clinvar_SNVs.vcf.gz and OMIM_SNVs.vcf.gz. The files contain a total of 3,226,691 SNVs, separated relative to their benchmark, OMIM and ClinVar databases, to assess the software tools' accuracy and consistency.
 
 ---
 
@@ -84,9 +84,10 @@ This will sequentially run:
 
 ## Output
 
-The following output annotated files will be generated in your working directory:
+The following output annotated files will be generated in your working directory, according to the software annotation tool:
 
 * `output_annovar.hg38_multianno.txt`
+* `output_snpeff.vcf`
 * `output_vep.vcf`
 * `output_bcftools_csq.vcf`
 * `output_predictions.txt` (for FATHMM-MKL)
@@ -102,7 +103,8 @@ This project is for academic and research use only. Please cite the original too
 
 ## Contact
 
-Developed by: **Martina Debnath**
+Developed by: **Martina Debnath** <3
+
 GitHub: [@marti-dotcom](https://github.com/marti-dotcom)
 Email: martinadebnath@gmail.com
 
